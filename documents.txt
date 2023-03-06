@@ -1,0 +1,13 @@
+from
+https://stackpython.co/tutorial/api-python-fastapi
+
+
+1) python -m venv venv
+2) venv\scripts\activate
+2.1) dont forget to change working directory to venv, to avoid error about unrecognize library import
+3) pip freeze > requirements.txt
+
+
+FastAPI will create 2 types of the API documents:
+1) Interactive API Docs .. SwaggerUI able to test APIs ... url --> http://127.0.0.1:8000/docs
+2) Alternative API docs .. ReDoc unable to test API, just view information ... url --> http://127.0.0.1:8000/redoc
