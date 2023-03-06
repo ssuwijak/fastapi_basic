@@ -1,5 +1,5 @@
 # fastapi_basic
----
+
 lab from [StackPython web](https://stackpython.co/tutorial/api-python-fastapi)
 
 ## after git clone
