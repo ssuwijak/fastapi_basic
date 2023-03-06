@@ -22,9 +22,11 @@ user_db = [
     }
 ]
 
+
 class User(BaseModel):
     name: str
     age: int
+
 
 @router.get("/")
 async def get_users():
@@ -35,17 +37,20 @@ async def get_users():
 async def get_user(user_id: int):
     return user_db[user_id-1]
 
+
 @router.post("/")
 async def create_user(user: User):
     result = user.dict()
     user_db.append(result)
     return user_db[-1]
 
+
 @router.put("/{user_id}")
 async def edit_user(user_id: int, user: User):
     result = user.dict()
     user_db[user_id-1].update(result)
     return result
+
 
 @router.delete("/{user_id}")
 async def edit_user(user_id: int):
